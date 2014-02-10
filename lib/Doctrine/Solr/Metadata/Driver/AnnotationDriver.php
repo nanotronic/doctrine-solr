@@ -55,7 +55,7 @@ class AnnotationDriver extends DoctrineAnnotationDriver
     /**
     * @var \Doctrine\Common\Annotations\AnnotationReader
     */
-    private $reader;
+    protected $reader;
 
     /**
     * @param AnnotationReader $reader
