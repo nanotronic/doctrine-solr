@@ -1,0 +1,23 @@
+{
+    "name": "nanotronic/doctrine-solr",
+    "description": "Solr and Doctrine integration",
+    "keywords": ["search", "solr"],
+    "homepage": "https://github.com/nanotronic/doctrine-solr",
+    "type": "library",
+    "require": {
+        "php": ">=5.4.3",
+        "doctrine/annotations": "dev-master",
+        "doctrine/inflector": "dev-master",
+        "doctrine/orm": ">=2.4.0",
+        "symfony/property-access": ">=2.4.0",
+        "jms/metadata": "dev-master",
+        "solarium/solarium": "3.*"
+    },
+    "dev-require": {
+    },
+    "autoload": {
+        "psr-0": {
+            "Doctrine\\Solr": "lib/"
+        }
+    }
+}
