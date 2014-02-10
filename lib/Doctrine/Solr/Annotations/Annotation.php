@@ -1,10 +1,11 @@
 <?php
 namespace Doctrine\Solr\Annotations;
 
+use Doctrine\Common\Annotations\Annotation as BaseAnnotation;
 use Doctrine\Solr\Annotations\Field;
 use Doctrine\Solr\Annotations\Operation;
 
-abstract class BaseAnnotation
+class Annotation
 {
     /**
      * Error handler for unknown property accessor in BaseAnnotation class.
