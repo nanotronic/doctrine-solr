@@ -8,7 +8,7 @@
  * @author Thomas Ploch <tp@responsive-code.de>
  * @since  19.03.13
  */
-namespace Doctrine\Solr\Doctrine\Annotations;
+namespace Doctrine\Solr\Annotations;
 
 use Doctrine\Solr\Annotations\Annotation as BaseAnnotation;
 
