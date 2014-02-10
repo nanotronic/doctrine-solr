@@ -5,7 +5,7 @@ use Doctrine\Common\Annotations\Annotation as BaseAnnotation;
 use Doctrine\Solr\Annotations\Field;
 use Doctrine\Solr\Annotations\Operation;
 
-class Annotation extends BaseAnnotation
+class Annotation
 {
     /**
      * Error handler for unknown property accessor in BaseAnnotation class.
