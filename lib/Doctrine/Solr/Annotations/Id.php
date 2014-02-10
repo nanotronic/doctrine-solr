@@ -10,7 +10,7 @@
  */
 namespace Doctrine\Solr\Doctrine\Annotations;
 
-use Doctrine\Solr\Doctrine\Annotations\BaseAnnotation;
+use Doctrine\Solr\Doctrine\Annotations\Annotation as BaseAnnotation;
 
 /**
  * Class Id
