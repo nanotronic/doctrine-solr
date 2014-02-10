@@ -13,20 +13,9 @@
         "jms/metadata": "1.5.*@dev",
         "solarium/solarium": "3.*"
     },
-    "minimum-stability": "dev",
-    "dev-require": {
-    },
     "autoload": {
         "psr-0": {
             "Doctrine\\Solr": "lib/"
-        }
-    },
-     "extra": {
-        "branch-alias": {
-            "dev-master": "2.2.x-dev",
-            "dev-2.1": "2.1.x-dev",
-            "dev-2.0": "2.0.x-dev",
-            "dev-1.0": "1.0.x-dev"
         }
     }
 }
