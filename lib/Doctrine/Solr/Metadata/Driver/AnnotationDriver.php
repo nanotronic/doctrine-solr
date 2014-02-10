@@ -174,6 +174,6 @@ class AnnotationDriver implements DriverInterface
     public static function registerAnnotationClasses()
     {
         // directory must match this file directory
-        AnnotationRegistry::registerAutoloadNamespace("Doctrine\\Solr\\Mapping\\Annotations", __DIR__.'/../../../../');
+        AnnotationRegistry::registerAutoloadNamespace("Doctrine\\Solr\\Annotations", __DIR__.'/../../../../');
     }
 }
