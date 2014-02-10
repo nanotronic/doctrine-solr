@@ -6,7 +6,7 @@
     "type": "library",
     "require": {
         "php": ">=5.4.3",
-        "doctrine/annotations": "dev-master",
+        "doctrine/annotations": "1.2.*@dev"
         "doctrine/inflector": "dev-master",
         "doctrine/orm": ">=2.4.0",
         "symfony/property-access": ">=2.4.0",
