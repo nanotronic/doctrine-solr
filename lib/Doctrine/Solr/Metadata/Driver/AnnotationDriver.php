@@ -4,9 +4,6 @@ namespace Doctrine\Solr\Metadata\Driver;
 use Doctrine\Common\Persistence\Mapping\Driver\AnnotationDriver as DoctrineAnnotationDriver;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
-#use Doctrine\Common\Persistence\Mapping\ClassMetadata;
-#use Doctrine\Solr\Mapping\Annotations as SOLR;
-#use Doctrine\Solr\Metadata\DocumentMetadata;
 
 use Doctrine\Solr\Annotations\Document;
 use Doctrine\Solr\Annotations\Field;
