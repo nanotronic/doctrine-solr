@@ -10,7 +10,7 @@
         "doctrine/inflector": "1.0.*@dev",
         "doctrine/orm": ">=2.4.0",
         "symfony/property-access": ">=2.4.0",
-        "jms/metadata": "dev-master",
+        "jms/metadata": "1.5.*@dev",
         "solarium/solarium": "3.*"
     },
     "minimum-stability": "dev",
