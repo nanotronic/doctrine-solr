@@ -1,7 +1,6 @@
 <?php
 namespace Doctrine\Solr\Metadata\Driver;
 
-use Doctrine\Common\Persistence\Mapping\Driver\AnnotationDriver as DoctrineAnnotationDriver;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 
@@ -14,12 +13,14 @@ use Doctrine\Solr\Annotations\Id;
 use Doctrine\Solr\Metadata\PropertyMetadata;
 use Doctrine\Solr\Metadata\ClassMetadata;
 
+use Metadata\Driver\DriverInterface;
+
 /**
  * Designed to load metadata into DocumentMetadata container.
  *
  * @author Jakub Sawicki <jakub.sawicki@slkt.pl>
  */
-class AnnotationDriver extends DoctrineAnnotationDriver
+class AnnotationDriver implements DriverInterface
 {
     const ANNOTATION_DOCUMENT = 'Doctrine\Solr\Annotations\Document';
     const ANNOTATION_OPERATION = 'Doctrine\Solr\Annotations\Operation';
