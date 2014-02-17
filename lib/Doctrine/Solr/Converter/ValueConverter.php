@@ -59,9 +59,10 @@ class ValueConverter implements ValueConverterInterface
         $traversable = $property->getValue($object);
 
         if (!is_array($traversable) && !$traversable instanceof \Traversable && !$traversable instanceof \stdClass) {
-            $message = "Field '%s' is declared as multi field, but property value is not traversable.";
+            $traversable = array();
+            /*$message = "Field '%s' is declared as multi field, but property value is not traversable.";
 
-            throw new \InvalidArgumentException(sprintf($message, $property->name));
+            throw new \InvalidArgumentException(sprintf($message, $property->name));*/
         }
 
         $values = array();
