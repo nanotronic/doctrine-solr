@@ -8,11 +8,11 @@
  * @author Thomas Ploch <tp@responsive-code.de>
  * @since  2.0.1
  */
-namespace TP\SolariumExtensionsBundle\Converter\Type;
+namespace Doctrine\Solr\Converter\Type;
 
 use Symfony\Component\PropertyAccess\PropertyAccessor;
-use TP\SolariumExtensionsBundle\Metadata\PropertyMetadata;
-use TP\SolariumExtensionsBundle\Converter\ValueConverter;
+use Doctrine\Solr\Metadata\PropertyMetadata;
+use Doctrine\Solr\Converter\ValueConverter;
 
 /**
  * Class BooleanConverter
