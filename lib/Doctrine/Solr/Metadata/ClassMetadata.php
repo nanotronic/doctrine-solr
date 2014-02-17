@@ -8,10 +8,10 @@
  * @author Thomas Ploch <tp@responsive-code.de>
  * @since  19.03.13
  */
-namespace TP\SolariumExtensionsBundle\Metadata;
+namespace Doctrine\Solr\Metadata;
 
 use Metadata\ClassMetadata as BaseClassMetadata;
-use TP\SolariumExtensionsBundle\Doctrine\Annotations\Operation;
+use Doctrine\Solr\Annotations\Operation;
 
 /**
  * Class ClassMetadata
