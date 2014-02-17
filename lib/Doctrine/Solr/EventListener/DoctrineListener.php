@@ -79,10 +79,7 @@ class DoctrineListener
         }
     }
 
-    /**
-     * @param PostResponseEvent $event
-     */
-    public function onKernelTerminate(PostResponseEvent $event)
+    public function onKernelTerminate()
     {
         $this->getProcessor()->flush();
     }
