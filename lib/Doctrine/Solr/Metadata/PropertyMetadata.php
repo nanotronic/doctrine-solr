@@ -8,7 +8,7 @@
  * @author Thomas Ploch <tp@responsive-code.de>
  * @since  19.03.13
  */
-namespace TP\SolariumExtensionsBundle\Metadata;
+namespace Doctrine\Solr\Metadata;
 
 use Metadata\PropertyMetadata as BasePropertyMetadata;
 
