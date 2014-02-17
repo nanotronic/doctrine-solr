@@ -8,11 +8,11 @@
  * @author Thomas Ploch <tp@responsive-code.de>
  * @since  2.0.1
  */
-namespace TP\SolariumExtensionsBundle\Converter\Type;
+namespace Doctrine\Solr\Converter\Type;
 
 use Symfony\Component\PropertyAccess\PropertyAccessor;
-use TP\SolariumExtensionsBundle\Metadata\PropertyMetadata;
-use TP\SolariumExtensionsBundle\Converter\ValueConverter;
+use Doctrine\Solr\Metadata\PropertyMetadata;
+use Doctrine\Solr\Converter\ValueConverter;
 
 /**
  * Class StringConverter
@@ -34,12 +34,12 @@ class StringConverter extends ValueConverter
     {
         $value = parent::convert($object, $property, $accessor);
 
-        if (!is_string($value)) {
+        /*if (!is_string($value)) {
             $type    = gettype($value);
             $message = "Property '%s' must be a string value, '%s' given.";
 
             throw new \InvalidArgumentException(sprintf($message, $property->name, $type));
-        }
+        }*/
 
         return $value;
     }
