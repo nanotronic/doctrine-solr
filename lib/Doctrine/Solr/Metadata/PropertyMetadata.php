@@ -42,6 +42,11 @@ class PropertyMetadata extends BasePropertyMetadata
     public $propertyAccess;
 
     /**
+     * @var string
+     */
+    public $convertFunction;
+
+    /**
      * @var bool
      */
     public $multi;
@@ -56,6 +61,7 @@ class PropertyMetadata extends BasePropertyMetadata
                 $this->type,
                 $this->boost,
                 $this->propertyAccess,
+                $this->convertFunction,
                 $this->multi
             )
         );
@@ -70,6 +76,7 @@ class PropertyMetadata extends BasePropertyMetadata
             $this->type,
             $this->boost,
             $this->propertyAccess,
+            $this->convertFunction,
             $this->multi
         ) = unserialize($str);
 
