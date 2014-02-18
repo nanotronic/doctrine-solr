@@ -34,6 +34,8 @@ class ValueConverter implements ValueConverterInterface
 
         if (!$property->multi) {
             $value = $property->getValue($object);
+            //$fieldName = isset($property->propertyAccess) ? $property->propertyAccess : $property->reflection->name;
+            //$value = $accessor->getValue($object, $fieldName);
         }
 
         if ($property->propertyAccess && $property->propertyAccess !== PropertyMetadata::TYPE_RAW) {
@@ -41,6 +43,11 @@ class ValueConverter implements ValueConverterInterface
                 $value,
                 $property->propertyAccess
             );
+        }
+
+        if($property->convertFunction && method_exists($object, $property->convertFunction)){
+            $cFn = $property->convertFunction;
+            $value = $object->$cFn($value);
         }
 
         return $value;
