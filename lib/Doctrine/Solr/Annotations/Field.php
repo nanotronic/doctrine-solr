@@ -131,6 +131,13 @@ class Field extends BaseAnnotation
     public $inflect = true;
 
     /**
+     * A function to convert the value after retrieving
+     *
+     * @var string
+     */
+    public $convertFunction = null;
+
+    /**
      * @param array $options
      * @throws \InvalidArgumentException
      */
@@ -178,6 +185,10 @@ class Field extends BaseAnnotation
 
         if (isset($options['propertyAccess'])) {
             $this->propertyAccess = (string) $options['propertyAccess'];
+        }
+
+        if (isset($options['convertFunction'])) {
+            $this->convertFunction = (string) $options['convertFunction'];
         }
     }
 
