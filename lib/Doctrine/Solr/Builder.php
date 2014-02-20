@@ -45,7 +45,7 @@ class Builder{
     public function __construct($clientConfig)
     {
         $this->solrClient = new Client($clientConfig);
-        $this->annotationDriver = new MetaData\Driver\AnnotationDriver(new \Doctrine\Common\Annotations\AnnotationReader());
+        $this->annotationDriver = new Metadata\Driver\AnnotationDriver(new \Doctrine\Common\Annotations\AnnotationReader());
         $this->metadateFactory = new MetadataFactory($this->annotationDriver);
         $this->serviceManager = new Manager\SolariumServiceManager();
         $this->serviceManager->setClient($this->solrClient, 'solarium.client.default');
