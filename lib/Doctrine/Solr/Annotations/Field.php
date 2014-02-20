@@ -184,7 +184,7 @@ class Field extends BaseAnnotation
         }
 
         if (isset($options['propertyAccess'])) {
-            $this->propertyAccess = (string) $options['propertyAccess'];
+            $this->propertyAccess = explode(',', $options['propertyAccess']);
         }
 
         if (isset($options['convertFunction'])) {
