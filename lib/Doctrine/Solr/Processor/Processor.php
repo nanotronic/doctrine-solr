@@ -198,18 +198,26 @@ class Processor
 
         /** @var \Doctrine\Solr\Metadata\PropertyMetadata $property */
         foreach ($classMetadata->propertyMetadata as $property) {
-            $converter = $this->converterCollection->getConverter($property->type);
+            $propertyAccess = $property->propertyAccess;
+            foreach ($property->fieldName as $key => $fieldName) {
+                # code...
 
-            if ($property->multi) {
-                $value = $converter->convertMulti($object, $property, $this->getPropertyAccessor());
-            } else {
-                $value = $converter->convert($object, $property, $this->getPropertyAccessor());
-            }
+                if($propertyAccess){
+                    $property->propertyAccess = $propertyAccess[$key];
+                }
+                $converter = $this->converterCollection->getConverter($property->type);
 
-            if (0.0 === $property->boost) {
-                $property->boost = null;
+                if ($property->multi) {
+                    $value = $converter->convertMulti($object, $property, $this->getPropertyAccessor());
+                } else {
+                    $value = $converter->convert($object, $property, $this->getPropertyAccessor());
+                }
+
+                if (0.0 === $property->boost) {
+                    $property->boost = null;
+                }
+                $document->addField($fieldName, $value, $property->boost);
             }
-            $document->addField($property->fieldName, $value, $property->boost);
         }
 
         $query->addDocument($document, $update);
