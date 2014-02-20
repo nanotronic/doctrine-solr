@@ -38,7 +38,7 @@ class ValueConverter implements ValueConverterInterface
             //$value = $accessor->getValue($object, $fieldName);
         }
         #var_dump($property);
-        if ($property->propertyAccess && $property->propertyAccess !== PropertyMetadata::TYPE_RAW) {
+        if ($value && $property->propertyAccess && $property->propertyAccess !== PropertyMetadata::TYPE_RAW) {
             $value = $accessor->getValue(
                 $value,
                 $property->propertyAccess
