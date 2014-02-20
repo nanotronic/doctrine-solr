@@ -135,12 +135,23 @@ class AnnotationDriver implements DriverInterface
             $propertyMetadata->multi = $annotation->isMultiValuedType($annotation->type);
             $propertyMetadata->type = $annotation->type;
             $propertyMetadata->propertyAccess = $annotation->propertyAccess;
-            $propertyMetadata->convertFunction = $annotation->convertFunction;
 
             $mapping = array($annotation->type => $classMetadata->mappingTable[$annotation->type]);
             $name = (null !== $annotation->name) ? $annotation->name : $reflectionProperty->getName();
+            $fieldName = $annotation->getFieldName($mapping, $name);
 
-            $propertyMetadata->fieldName = $annotation->getFieldName($mapping, $name);
+            $propertyMetadata->fieldName = array($fieldName);
+
+            $propertMetaname = $reflectionProperty->getName();
+
+            if($annotation->propertyAccess){
+                foreach($annotation->propertyAccess as $key => $access){
+                    if($key > 0){
+                        $fieldName = $annotation->getFieldName($mapping, $name . '_' . $access);
+                        $propertyMetadata->fieldName[] = $fieldName;
+                    }
+                }
+            }
 
             $classMetadata->addPropertyMetadata($propertyMetadata);
         }
