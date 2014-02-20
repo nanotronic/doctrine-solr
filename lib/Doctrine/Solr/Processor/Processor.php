@@ -218,6 +218,7 @@ class Processor
                 }
                 $document->addField($fieldName, $value, $property->boost);
             }
+            $property->propertyAccess = $propertyAccess;
         }
 
         $query->addDocument($document, $update);
