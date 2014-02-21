@@ -78,6 +78,6 @@ class ValueConverter implements ValueConverterInterface
             $values[] = $this->convert($item, $property, $accessor);
         }
 
-        return $values;
+        return array_unique($values);
     }
 }
