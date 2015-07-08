@@ -33,9 +33,9 @@ class ValueConverter implements ValueConverterInterface
         $value = $object;
 
         if (!$property->multi) {
-            $value = $property->getValue($object);
-            //$fieldName = isset($property->propertyAccess) ? $property->propertyAccess : $property->reflection->name;
-            //$value = $accessor->getValue($object, $fieldName);
+            //$value = $property->getValue($object);
+            $fieldName = isset($property->propertyAccess) ? $property->propertyAccess : $property->reflection->name;
+            $value = $accessor->getValue($object, $fieldName);
         }
         #var_dump($property);
         if ($value && $property->propertyAccess && $property->propertyAccess !== PropertyMetadata::TYPE_RAW) {
@@ -75,7 +75,13 @@ class ValueConverter implements ValueConverterInterface
         $values = array();
 
         foreach ($traversable as $item) {
-            $values[] = $this->convert($item, $property, $accessor);
+            $value = $this->convert($item, $property, $accessor);
+            if (!is_array($value)) {
+                $value = array($value);
+            }
+            foreach ($value as $val) {
+                $values[] = $val;
+            }
         }
 
         return array_unique($values);
