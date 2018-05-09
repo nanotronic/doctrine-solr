@@ -5,11 +5,10 @@
     "homepage": "https://github.com/nanotronic/doctrine-solr",
     "type": "library",
     "require": {
-        "php": ">=5.3.10",
         "doctrine/annotations": "dev-master",
-        "doctrine/inflector": "^1.1.0",
-        "doctrine/orm": ">=2.4.0",
-        "symfony/property-access": ">=2.4.0",
+        "doctrine/inflector": "^1.3.0",
+        "doctrine/orm": ">=2.6.0",
+        "symfony/property-access": ">=4.0.0",
         "jms/metadata": "dev-master",
         "solarium/solarium": "3.*"
     },
