@@ -69,7 +69,7 @@ class AnnotationDriver implements DriverInterface
     * @throws \LogicException
     * @return ClassMetadata
     */
-    public function loadMetadataForClass(\ReflectionClass $class): ?ClassMetadata
+    public function loadMetadataForClass(\ReflectionClass $class)
     {
         $classMetadata = new ClassMetadata($class->getName());
 
